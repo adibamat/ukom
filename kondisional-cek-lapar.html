@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kondisional</title>
+</head>
+<style>
+    footer {
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 1em;
+}
+</style>
+<body>
+    <label for="kondisi">Kondisi: </label>
+    <input type="text" id="kondisi" /> <br/><br/>
+    <button onclick="cekLapar();">Cek Lapar</button> <br/><br/>
+
+    <h1 id="hasil"></h1>
+
+    <script>
+        function cekLapar () {
+            let kondisi = document.getElementById('kondisi').value; 
+            let hasil = '';
+
+            if (kondisi === 'lapar') {
+                // waktu makan 
+                hasil = 'waktu makan..';
+            } 
+            else {
+                // bukan waktu makan 
+                hasil = 'bukan waktu makan..';
+            }
+
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+    </script>
+<footer>
+    &copy; Copyright 2024. Amat Adib. All Rights Reserved. Uji Kompetensi.
+</footer>
+</body>
+</html>

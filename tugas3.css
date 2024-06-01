@@ -1,0 +1,105 @@
+html {
+  background-color: aliceblue;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 20px 12px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 6px;
+}
+
+nav ul li a:hover {
+  background-color: aliceblue;
+}
+
+section {
+  margin: 20px;
+}
+
+form {
+  background-color: white;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+form input[type="submit"] {
+  margin: 0;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* tambahkan CSS untuk section profile disini */
+
+body {
+  margin: 0;
+}
+header {
+  background: red;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 1em;
+  
+}
+
+ul li {
+  list-style-type: none;
+}
+ul li a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+}
+
+#profil {
+  flex: 1;
+  background: yellow;
+}
+
+#detail {
+  flex: 3;
+  background: orange;
+  padding: 0 1em;
+}
+
+#detail {
+  flex: 2;
+  padding: 0 10px;
+  background:white;
+  color: #fff;
+}
+
+footer {
+  background: black;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  padding: 1em;
+}

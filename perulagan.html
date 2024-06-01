@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adib</title>
+</head>
+<style>
+    footer {
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 1em;
+}
+</style>
+<body>   
+    <label for="pesan">Pesan: </label>
+    <input type="text" id="pesan" /> <br/>
+    <label for="berapa-kali">Berapa Kali: </label>
+    <input type="number" id="berapa_kali" /> <br/>
+    <button onclick="cetakfor();">CetakFor</button><br/><br/> 
+    <button onclick="cetakWhileDo();">CetakWile</button>
+
+        <ol id="hasil"></ol>
+
+    <script>
+        function cetakfor(){
+            let pesan = document.getElementById('pesan').value;
+            let jumlah = document.getElementById('berapa_kali').value;
+            let tampung = "";
+            
+            for(let i = 0; i <jumlah;i++){
+                 tampung += "<li>" + pesan + "</li>";     
+        }
+        document.getElementById('hasil').innerHTML = tampung;
+
+    }
+        
+        function cetakWhileDo () {
+            let pesan = document.getElementById('pesan').value;
+            let jumlah = document.getElementById('berapa_kali').value;
+            let tampung = "";
+            let i = 0;
+            while (i < jumlah) {
+                tampung += "<li>" + pesan + "</li>" + "<br/>";     
+                i++
+            }
+        document.getElementById('hasil').innerHTML = tampung;
+        }
+    </script>
+     <footer>
+        &copy; Copyright 2024. Amat Adib. All Rights Reserved. Uji Kompetensi.
+    </footer>
+</body>
+</html>

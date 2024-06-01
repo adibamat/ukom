@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengharaan</title>
+</head>
+<style>
+    footer {
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 1em;
+}
+</style>
+<body>
+    <h1>Pengharaan</h1>
+
+    <label for="pilih_penghargaan">Pilih Pengharaan: </label>
+    <!-- menggunakan event onchange -->
+    <!-- onchange dieksekusi ketika nilai dari elemennya berubah -->
+    <!-- this.value ==> mengirimkan value  -->
+    <select name="pilih_penghargaan" id="pilih_penghargaan" onchange="generateArti(this.value);">
+        <option value="" disabled selected>- pilih penghargaan -</option>
+        <option value="sekolah">sekolah</option>
+        <option value="umum">umum</option>
+    </select>
+
+    <hr/>
+
+    <h1 id="hasil"></h1>
+
+    <script>
+        // function generateArti (warna) {
+
+        // }
+
+        // membuat arrow function 
+        const generateArti = (penghargaan) => {
+  
+
+            let arti = (penghargaan === "sekolah") ? "Lulusan terbaik dan Pembuatan tanaman terindah" : (penghargaan === "umum") ? "Lulusan 3 besar terbaik di JNA" : jalan ;
+            
+            document.getElementById('hasil').innerHTML = arti;
+
+        }
+
+        
+    </script>
+<div>
+    <button type="button"><a href="index.html">Back</a></button>
+    <footer>
+        &copy; Copyright 2024. Amat Adib. All Rights Reserved. Uji Kompetensi.
+    </footer>
+</body>
+</html>

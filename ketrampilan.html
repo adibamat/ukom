@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keterampilan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  footer {
+  background: black;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  padding: 1em;
+}
+</style>
+<body>
+  <h1>Keterampilan</h1>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+         
+
+      <div class="container pt-5 mt-4">
+        <div class="row gy-3 text-center">
+            <div class="col-md-4 col-sm-4">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Database</button>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Jaringan Komputer</button>
+                
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Office</button>
+
+            </div>
+        </div>
+      </div>
+
+      <div id="modal1" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalStaticBackdropLabel">Database</h5>
+              <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><span>1.database php.</span></p>
+                <p><span>2.html.</span></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="simpan();">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalStaticBackdropLabel">Jaringan Komputer</h5>
+              <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><span>1. Merancang jaringan LAN, WAN, MAN dan Wireleses</span></p>
+                <p><span>2. Remote client dengan ip addres serer</span></p>
+                <p><span>3. Mapping jaringan</span></p>
+                <p><span>4. Membuat kabel jaringan</span></p>
+                 </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="simpan();">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalStaticBackdropLabel">Microsoft Office</h5>
+              <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><span>1. Microsoft Word.</span></p>
+                <p><span>2. Microsoft Excel.</span></p>
+                <p><span>3. Microsoft Power Point.</span></p>
+                <p><span>4. Microsoft Power Visio.</span></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="simpan();">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      
+      <script>
+        function simpan () {
+            Swal.fire({
+                title: "Do you want to save the changes?",
+                icon: 'question',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: "Save",
+                denyButtonText: `Don't save`
+            })
+            .then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    Swal.fire("Berhasil!", "Data telah disimpan!", "success")
+                    .then(() => {
+                        $('.modal').modal('hide');
+                    });
+                } else if (result.isDenied) {
+                    Swal.fire("Changes are not saved", "", "info");
+                }
+            });
+        }
+      </script>
+<footer>
+  &copy; Copyright 2024. Amat Adib. All Rights Reserved. Uji Kompetensi.
+</footer>
+</body>
+</html>
